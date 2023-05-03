@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
-const Login = () => {
+const Login = ({ gestionarLogin }) => {
   const {
     register,
     handleSubmit,
@@ -22,6 +22,7 @@ const Login = () => {
       .then((response) => {
         console.log("Login Correcto");
         console.log(response.data);
+        gestionarLogin();
         localStorage.setItem(
           "datosUsuario",
           JSON.stringify({

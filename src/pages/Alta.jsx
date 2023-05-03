@@ -2,7 +2,6 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 
-
 const Alta = () => {
   const {
     register,
@@ -12,7 +11,7 @@ const Alta = () => {
 
   const gestorFormulario = async (data) => {
     await axios
-      .post("http://localhost:5000/api/usuarios", {
+      .post("http://localhost:5001/api/usuarios", {
         nombre: data.nombre,
         email: data.email,
         password: data.password,

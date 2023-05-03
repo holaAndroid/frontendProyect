@@ -31,10 +31,10 @@ const Usuarios = () => {
           email: data.email,
           password: data.password,
         },
-        // {
-        //   headers: {
-        //     Authorization: "Bearer " + extraerDatosDeUsuario()[0], // En los headers van 'Bearer ' + token recibido
-        //   },
+        {
+          headers: {
+            Authorization: "Bearer " + extraerDatosDeUsuario()[0], // En los headers van 'Bearer ' + token recibido
+          },
         }
       )
       .then((response) => {
