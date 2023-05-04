@@ -48,11 +48,9 @@ const Peliculas = () => {
   /*   const subeImagen = (e) => {
     const imagen = e.target.files[0];
     console.log(imagen);
-
     const formImagen = new FormData();
     formImagen.append("file", imagen);
     formImagen.append("upload_preset", "ddcu4b7d");
-
     axios
       .post("https://api.cloudinary.com/v1_1/franio/image/upload", formImagen)
       // ? Añadir setUrlImagen para cargar la URL de la imagen en Cloudinary
@@ -82,9 +80,14 @@ const Peliculas = () => {
             />
             {errors.nombre && <p>{errors.nombre.message}</p>}
 
-            <button type="submit" onClick={(e) => handleSubmit(e)}>
-              Buscar
-            </button>
+            <div className="submit">
+              <input
+                type="submit"
+                id="submit"
+                value="buscar"
+                onClick={(e) => handleSubmit(e)}
+              />
+            </div>
           </form>
         </div>
       </div>

@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import Inicio from "./pages/Inicio";
 import Error from "./pages/Error";
-import Peliculas from "./pages/Peliculas";
+/* import Peliculas from "./pages/Peliculas"; */
 import Alquiler from "./pages/Alquiler";
 import Logout from "./pages/Logout";
 import Login from "./pages/Login";
@@ -51,9 +51,9 @@ function App() {
               <NavLink className={"navlink"} to="/">
                 Inicio
               </NavLink>
-              <NavLink className={"navlink"} to="/peliculas">
+              {/*   <NavLink className={"navlink"} to="/peliculas">
                 Peliculas
-              </NavLink>
+              </NavLink> */}
               <NavLink className={"navlink"} to="/alquiler">
                 Alquiler
               </NavLink>
@@ -65,7 +65,7 @@ function App() {
         </div>
         <Routes>
           <Route path="/" element={<Inicio />} />
-          <Route path="/peliculas" element={<Peliculas />} />
+          {/* <Route path="/peliculas" element={<Peliculas />} /> */}
           <Route path="/alquiler" element={<Alquiler />} />
           <Route
             path="/login"

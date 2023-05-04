@@ -19,10 +19,13 @@ const Tabla = ({ datos }) => {
           <tr key={dato._id} onClick={() => gestorSeleccion(dato)}>
             <td>{dato.nombre}</td>
             {dato.nombre !== null ? (
-              <td>{dato.peliculas.nombre}</td>
+              <td>{dato.nombre}</td>
             ) : (
               <td>No Asignado</td>
             )}
+            <td>{dato.anyo}</td>
+            <td>{dato.duration}</td>
+            <td>{dato.genero}</td>
           </tr>
         ))}
       </tbody>

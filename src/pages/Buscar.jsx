@@ -20,13 +20,13 @@ const Buscar = () => {
     const recupera = async () => {
       if (query.length === 0) {
         const res = await axios.get(
-          process.env.REACT_APP_BACKEND_URL + "/peliculas"
+          process.env.REACT_APP_BACKEND_URL + "/api/peliculas"
         );
-        // const res = await axios.get('http://localhost:5000/api/cursos');
+        // const res = await axios.get('http://localhost:5000/api/peliculas');
         setDatos(res.data.peliculas);
       } else {
         const res = await axios.get(
-          process.env.REACT_APP_BACKEND_URL + `/peliculas/buscar/${query}`
+          process.env.REACT_APP_BACKEND_URL + `/api/peliculas/buscar/${query}`
         );
         setDatos(res.data.peliculas);
       }
