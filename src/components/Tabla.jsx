@@ -13,7 +13,7 @@ const Tabla = ({ datos }) => {
     <table className="tabla">
       <tbody>
         <tr>
-          <th>nombre</th>
+          <th></th>
         </tr>
         {datos.map((dato) => (
           <tr key={dato._id} onClick={() => gestorSeleccion(dato)}>
