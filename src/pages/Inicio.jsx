@@ -46,7 +46,7 @@ const Inicio = () => {
           className="buscar"
           type="text"
           name="busca"
-          placeholder="buscar"
+          placeholder="introduce nombre de película"
           onChange={gestorBusca}
           // onKeyDown={gestorTecla}
         />
