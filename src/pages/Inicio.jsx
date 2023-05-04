@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import Tabla from "../components/Tabla";
 import "./Buscar.css";
 import { Slide } from "react-slideshow-image";
@@ -38,6 +39,25 @@ const Inicio = () => {
   const gestorBusca = (e) => {
     setQuery(e.target.value);
   };
+  useEffect(() => {
+    const recupera = async () => {
+      if (query.length === 0) {
+        const res = await axios.get(
+          process.env.REACT_APP_BACKEND_URL + "/api/peliculas"
+        );
+        // const res = await axios.get('http://localhost:5000/api/peliculas');
+        setDatos(res.data.peliculas);
+      } else {
+        const res = await axios.get(
+          process.env.REACT_APP_BACKEND_URL + `/api/peliculas/buscar/${query}`
+        );
+        setDatos(res.data.peliculas);
+      }
+      console.log(datos);
+    };
+    recupera();
+  }, [query]);
+
   return (
     <div>
       {" "}
