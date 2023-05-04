@@ -17,7 +17,6 @@ const Tabla = ({ datos }) => {
         </tr>
         {datos.map((dato) => (
           <tr key={dato._id} onClick={() => gestorSeleccion(dato)}>
-            <td>{dato.nombre}</td>
             {dato.nombre !== null ? (
               <td>{dato.nombre}</td>
             ) : (
