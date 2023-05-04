@@ -25,7 +25,7 @@ const Usuarios = () => {
     console.log(extraerDatosDeUsuario());
     await axios
       .post(
-        process.env.REACT_APP_BACKEND_URL + "api/usuarios",
+        process.env.REACT_APP_BACKEND_URL + "/usuarios",
         {
           nombre: data.curso,
           email: data.email,
