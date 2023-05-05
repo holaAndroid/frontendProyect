@@ -27,7 +27,7 @@ const Peliculas = () => {
       .post(
         process.env.REACT_APP_BACKEND_URL + "/usuarios",
         {
-          nombre: data.curso,
+          nombre: data.nombre,
           email: data.email,
           password: data.password,
         },
