@@ -1,6 +1,7 @@
 // import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import Buscar from "./Buscar";
 // import { Image } from "cloudinary-react"; // ? Instalar cloudinary-react e importar el/los componentes necesarios
 
 const Alquiler = () => {
@@ -25,7 +26,7 @@ const Alquiler = () => {
     console.log(extraerDatosDeUsuario());
     await axios
       .post(
-        process.env.REACT_APP_BACKEND_URL + "/peliculas",
+        process.env.REACT_APP_BACKEND_URL + "/alquiler",
         {
           titulo: data.nombre,
           usuario: extraerDatosDeUsuario()[1],
