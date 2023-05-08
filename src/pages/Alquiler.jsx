@@ -27,7 +27,7 @@ const Alquiler = () => {
       .post(
         process.env.REACT_APP_BACKEND_URL + "/peliculas",
         {
-          titulo: data.titulo,
+          titulo: data.nombre,
           usuario: extraerDatosDeUsuario()[1],
           anyo: data.anyo,
           duration: data.duration,
