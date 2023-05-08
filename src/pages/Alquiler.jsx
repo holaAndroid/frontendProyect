@@ -15,6 +15,7 @@ const Alquiler = () => {
 
   const extraerDatosDeUsuario = () => {
     const datosRecuperar = JSON.parse(localStorage.getItem("datosUsuario"));
+    console.log(datosRecuperar);
     if (datosRecuperar && datosRecuperar.token) {
       // Si existe algo que recuperar y dentro de lo recuperado existe la propiedad token
 //       console.log(datosRecuperar.token);
