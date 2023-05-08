@@ -1,7 +1,7 @@
 // import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
-import Buscar from "./Buscar";
+// import Buscar from "./Buscar";
 // import { Image } from "cloudinary-react"; // ? Instalar cloudinary-react e importar el/los componentes necesarios
 
 const Alquiler = () => {
@@ -17,7 +17,7 @@ const Alquiler = () => {
     const datosRecuperar = JSON.parse(localStorage.getItem("datosUsuario"));
     if (datosRecuperar && datosRecuperar.token) {
       // Si existe algo que recuperar y dentro de lo recuperado existe la propiedad token
-      console.log(datosRecuperar.token);
+//       console.log(datosRecuperar.token);
       return [datosRecuperar.token, datosRecuperar.userId];
     }
   };
