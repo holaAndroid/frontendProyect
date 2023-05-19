@@ -81,7 +81,7 @@ function App() {
         </Routes>
       </Router>
       <div className="footer">
-        <span>Desarrollo web elaborado by Yudi y Sixto</span>
+        <span>Desarrollo web elaborado by Yudi</span>
       </div>
     </div>
   );
